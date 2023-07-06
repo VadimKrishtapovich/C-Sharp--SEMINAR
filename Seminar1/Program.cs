@@ -1,5 +1,8 @@
-﻿///* Инструкция для примера.
-// int a = 25;
+﻿/* Первое занятие
+
+// Вводные
+
+///* int a = 25;
 // double b = 36.6;
 // string c = "Hello world";
 // bool d = true;
@@ -22,9 +25,10 @@
 // Console.Write("Input a second number: ");
 // int num2= Convert.ToInt32(Console.ReadLine());
 
-// int quad2 = num2 * num2;
+// // int quad2 = num2 * num2;
 
-// if(num1 == quad2)
+// // ///if(num1 == quad2) можно по другогу см. ниже
+// if(num1 == num2 * num2)
 // {
 //     Console.Write("Yes");
 // }
@@ -32,9 +36,21 @@
 //     {
 //     Console.Write("No");
 //     }
-// //
 
-///* Task 2 Напишите программу, которая на вход принимает одно число (N), а на выходе показывает все целые числа в промежутке от -number до number.
+
+///* 
+// Task 2 Напишите программу, которая на вход принимает одно число (number), а на выходе показывает все целые числа в промежутке от -number до number.
+
+// Console.Write ("Input a positive number: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// int current = -number;   // стартуем
+
+// while(current <= number)
+// {
+//     Console.Write(current + " ");
+//     current++;
+// }
 
 ///*  Task 3. Написать программу которая на вход принимает два числа и выдаёт большее. 
 // то ставит, что числа ровны. УТОЧНИТЬ КАК ДЕЛЬТЬ ЧТОБЫ МАКСИМАЛЬНОЕ
@@ -99,7 +115,7 @@
 //     Console.Write("max = " + num2);
 // }
 
-///* Task 4. Напишите программу которая на вход принимает три числа и выдаёт большее. 
+///*Task 4. Напишите программу которая на вход принимает три числа и выдаёт большее.
 //Console.Write("Input a first number: ");
 // int num1 = Convert.ToInt32(Console.ReadLine());
 // Console.Write("Input a second number: ");
@@ -119,8 +135,20 @@
 // }
 // Console.WriteLine($"max = {max}");
 
+///*  Task 6. Напишите программу, которая на вход принимает одно число и выдаёт, является ли число чётным.
+ //  // (Делится ли оно без остатка)
 
- ///* Task 6. Напишите программу, которая на вход принимает одно число и выдаёт, является ли число чётным
+//  Console.Write ("Input a number: ");
+//  int number = Convert.ToInt32(Console.ReadLine());
+
+// if (number % 2 == 0)
+// {
+//     Console.Write("Число является чётным.");
+// }
+// else
+// {
+//     Console.Write("Число является не чётным.");
+// }
  
 
     
