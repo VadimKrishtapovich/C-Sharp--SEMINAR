@@ -39,7 +39,7 @@
 // показывает все целые числа в промежутке от -number до number.
 
 ///* Task 3. Написать программу которая на вход принимает два числа и выдаёт большее. 
-// (Не до конца). !!!! как-то надо 
+// (Не до конца). !!! как-то надо 
 // вставить макс. Исправить ошибку если второе число больше, 
 // то ставит, что числа ровны. УТОЧНИТЬ КАК ДЕЛЬТЬ ЧТОБЫ МАКСИМАЛЬНОЕ
 // ВВОДИМОЕ ЧИСЛО БЫЛО ТРИ??
@@ -103,4 +103,30 @@
 //     Console.Write("max = " + num2);
 // }
 
-///*
+///* Task 4. Напишите программу которая на вход принимает три числа и выдаёт большее.
+
+Console.Write("Input a first number: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a second number: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a third numbers: ");
+int num3 = Convert.ToInt32(Console.ReadLine());
+
+int max = num1;
+
+if (num2 > max)
+{
+    max = num2;
+}
+if (num3 > max)
+{
+    max = num3;
+}
+
+Console.WriteLine($"max = {max}");
+ 
+ 
+
+    
+
+
