@@ -136,7 +136,7 @@
 // Console.WriteLine($"max = {max}");
 
 ///*  Task 6. Напишите программу, которая на вход принимает одно число и выдаёт, является ли число чётным.
- //  // (Делится ли оно без остатка)
+ //  // (Делится ли оно без остатка) СДЕЛАТЬ ЧЕРЕЗ CURRENT.
 
 //  Console.Write ("Input a number: ");
 //  int number = Convert.ToInt32(Console.ReadLine());
