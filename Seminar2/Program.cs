@@ -34,24 +34,25 @@
 
 
 
-//Напишите программу, которая выводит случайное число из отрезка 
+/*Напишите программу, которая выводит случайное число из отрезка 
 //[10, 99] 
 //и показывает наибольшую цифру числа.
 
-// int MaxNumber(int deknumber)
-// {
-//     int firstnumber = deknumber / 10;
-//     int secondnumber = deknumber % 10;
+int MaxNumber(int deknumber)
+{
+    int firstnumber = deknumber / 10;
+    int secondnumber = deknumber % 10;
 
-//     if(firstnumber > secondnumber) return firstnumber;
-//     else return secondnumber;
-// }
+    if(firstnumber > secondnumber) return firstnumber;
+    else return secondnumber;
+}
 
-//  int randNumber = new Random().Next(10,100);
-// int result = MaxNumber(randNumber);
-
+int randNumber = new Random().Next(10,100);
+int result = MaxNumber(randNumber);
 
 // Console.WriteLine($"New version of {randNumber} is {result}");
+
+*/
 
 //Напишите программу, которая принимает на вход два числа 
 //и проверяет, 
@@ -63,28 +64,28 @@
 
 Console.Write("Введите трехзначное число: ");
 {
-        int number = Convert.ToInt32(Console.ReadLine());
+    int number = Convert.ToInt32(Console.ReadLine());
 
-        int num2 = (number / 10) % 10;
+    int num2 = (number / 10) % 10;
 
-        Console.Write("Вторая цифра числа: " + num2);
-    }
+    Console.Write("Вторая цифра числа: " + num2);
+}
 */
 
 /*  Task 13. Напишите программу которая выводит третью цифру заданого числа. 
 // 645 -> 5, 78 -> третьей цифры нет, 32679 -> 6.
 
 
-        Console.Write("Введите число: ");
-        int number = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите число: ");
+    int number = Convert.ToInt32(Console.ReadLine());
     
-        int thirdDigit = GetThirdDigit(number);
+    int thirdDigit = GetThirdDigit(number);
     
-        int GetThirdDigit(int number)  // Возвращает третью цифру числа в качестве результата.
-    {
-        int thirdDigit = (number / 100) % 10;
-        return thirdDigit;
-    }
+    int GetThirdDigit(int number)  // Возвращает третью цифру числа в качестве результата.
+{
+    int thirdDigit = (number / 100) % 10;
+    return thirdDigit;
+}
 
-        Console.WriteLine($"Третья цифра числа: {thirdDigit}");
+    Console.WriteLine($"Третья цифра числа: {thirdDigit}");
 */
