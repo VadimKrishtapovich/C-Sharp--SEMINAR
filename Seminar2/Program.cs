@@ -11,10 +11,8 @@
 // 13254 % 10000 = 3254
 */
 
-
 /* Task 1. Напишите программу, которая выводит случайное 
 // трёхзначное число и удаляет вторую цифру этого числа.
-
 
 // int CutNumber(int num)
 // {
@@ -32,11 +30,29 @@
 
 */
 
+/* Task 2. Напишите программу,которая принимает на вход число и проверяет
+// кратно ли оно одновременны a и b.
+
+bool IsDividable(int num, int a, int b)
+{
+    if(num % a == 0 && num % b == 0) return true;
+    else return false;
+}
 
 
-/*Напишите программу, которая выводит случайное число из отрезка 
-//[10, 99] 
-//и показывает наибольшую цифру числа.
+Console.Write("Input a number for checking: ");
+int number = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a first divider: ");
+int div1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a second divider: ");
+int div2 = Convert.ToInt32(Console.ReadLine());
+
+bool result = IsDividable(number, div1, div2); 
+Console.WriteLine(result);
+*/
+
+/* Task 3. Напишите программу, которая выводит случайное число из отрезка 
+//[10, 99] и показывает наибольшую цифру числа. Например 49 (из 4 и 9).
 
 int MaxNumber(int deknumber)
 {
@@ -47,17 +63,29 @@ int MaxNumber(int deknumber)
     else return secondnumber;
 }
 
-int randNumber = new Random().Next(10,100);
+int randNumber = new Random().Next(10, 100);
+Console.Write(randNumber );
 int result = MaxNumber(randNumber);
 
-// Console.WriteLine($"New version of {randNumber} is {result}");
-
+Console.Write($" New version of {randNumber} is {result}");
 */
 
-//Напишите программу, которая принимает на вход два числа 
-//и проверяет, 
-//является ли одно число квадратом другого.
+// Task 4/ Напишите программу, которая принимает на вход два числа 
+//и проверяет, является ли одно число квадратом другого.
 
+// bool QuadResult(int num1, int num2)
+// {
+//     if(num1 % num2 == 0 || num2%num1 == 0) return true;
+//     else return false;
+// }
+
+// Console.Write("Input a first namber: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input a second number: ");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+
+// bool result = QuadResult(num1, num2);
+// Console.WriteLine(result);
 
 /* Task 10. Напишите программу, которая принимает на вход трёхзначное 
 // число и на выходе показывает вторую цифру этого числа.
@@ -89,3 +117,7 @@ Console.Write("Введите трехзначное число: ");
 
     Console.WriteLine($"Третья цифра числа: {thirdDigit}");
 */
+
+// Напишите программу, которая принимает на вход цифру, обозначающую день недели,
+// и проверяет, является ли этот день выходным. 6 -> да, 7 -> да, 1 -> нет.
+
