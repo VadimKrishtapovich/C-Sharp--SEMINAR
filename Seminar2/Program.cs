@@ -70,7 +70,7 @@ int result = MaxNumber(randNumber);
 Console.Write($" New version of {randNumber} is {result}");
 */
 
-// Task 4/ Напишите программу, которая принимает на вход два числа 
+/* Task 4 Напишите программу, которая принимает на вход два числа 
 //и проверяет, является ли одно число квадратом другого.
 
 // bool QuadResult(int num1, int num2)
@@ -86,6 +86,7 @@ Console.Write($" New version of {randNumber} is {result}");
 
 // bool result = QuadResult(num1, num2);
 // Console.WriteLine(result);
+*/
 
 /* Task 10. Напишите программу, которая принимает на вход трёхзначное 
 // число и на выходе показывает вторую цифру этого числа.
@@ -100,16 +101,16 @@ Console.Write("Введите трехзначное число: ");
 }
 */
 
-/*  Task 13. Напишите программу которая выводит третью цифру заданого числа. 
-// 645 -> 5, 78 -> третьей цифры нет, 32679 -> 6.
-
+/*  Task 13. Напишите программу которая выводит третью цифру заданого 
+числа. 645 -> 5, 78 -> третьей цифры нет, 32679 -> 6.
 
     Console.Write("Введите число: ");
     int number = Convert.ToInt32(Console.ReadLine());
     
     int thirdDigit = GetThirdDigit(number);
     
-    int GetThirdDigit(int number)  // Возвращает третью цифру числа в качестве результата.
+    int GetThirdDigit(int number)  // Возвращает третью цифру числа в 
+                                  // качестве результата.
 {
     int thirdDigit = (number / 100) % 10;
     return thirdDigit;
@@ -118,6 +119,24 @@ Console.Write("Введите трехзначное число: ");
     Console.WriteLine($"Третья цифра числа: {thirdDigit}");
 */
 
-// Напишите программу, которая принимает на вход цифру, обозначающую день недели,
-// и проверяет, является ли этот день выходным. 6 -> да, 7 -> да, 1 -> нет.
+/* Task 15. Напишите программу, которая принимает на вход цифру, обозначающую день 
+// недели, и проверяет, является ли этот день выходным. 
+// 6 -> да, 7 -> да, 1 -> нет.
+
+// bool Weekend(int num1)
+// {
+//     if(num1 == 6 || num1 == 7) return true;
+//     else return false;
+// }
+
+// Console.Write("Введите номер дня недели (от 1 до 7): ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+
+// bool result = Weekend(num1);
+// Console.Write(result);
+*/
+
+
+
+
 
