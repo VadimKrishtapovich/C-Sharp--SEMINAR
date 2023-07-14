@@ -21,21 +21,21 @@ ShowDiapazone(quad);
 / точки X и Y, причём не нулевые и выдаёт номер четверти плоскости 
 / в которой находится эта точка.
 
-// int Coordinates (int cordinate1, int cordinate2)
-// {
-//     if( cordinate1> 0 && cordinate2 > 0) return 1;
-//     if( cordinate1< 0 && cordinate2 > 0) return 2;
-//     if( cordinate1 < 0 && cordinate2 < 0) return 3;
-//     if( cordinate1 > 0 && cordinate2 < 0) return 4;
-//     else return -1;
-// }
-// Console.Write("Input Coordinates x: ");
-// int x = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Input Coordinates y: ");
-// int y = Convert.ToInt32(Console.ReadLine());
+int Coordinates (int cordinate1, int cordinate2)
+{
+    if( cordinate1> 0 && cordinate2 > 0) return 1;
+    if( cordinate1< 0 && cordinate2 > 0) return 2;
+    if( cordinate1 < 0 && cordinate2 < 0) return 3;
+    if( cordinate1 > 0 && cordinate2 < 0) return 4;
+    else return -1;
+}
+Console.Write("Input Coordinates x: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input Coordinates y: ");
+int y = Convert.ToInt32(Console.ReadLine());
 
-// int result = Coordinates(x, y);
-// Console.WriteLine(result);
+int result = Coordinates(x, y);
+Console.WriteLine(result);
 */
 
 /* Task 3. Напишите программу, которая принимает на вход координаты 
@@ -45,23 +45,23 @@ ShowDiapazone(quad);
 //                              квадратный корень свего аргумента.
 
 
-// double Distanse(int x1, int x2, int y1,int y2)
-// {
-//     double result = Math.Sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
-//     return result;
-// }
+double Distanse(int x1, int x2, int y1,int y2)
+{
+    double result = Math.Sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+    return result;
+}
 
-// Console.Write("Input x1: ");
-// int x1 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Input y1: ");
-// int y1 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Input x2: ");
-// int x2 = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Input y2: ");
-// int y2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input x1: ");
+int x1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input y1: ");
+int y1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input x2: ");
+int x2 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input y2: ");
+int y2 = Convert.ToInt32(Console.ReadLine());
 
-// double result = Distanse(x1,x2,y1,y2);
-// Console.WriteLine(result);
+double result = Distanse(x1,x2,y1,y2);
+Console.WriteLine(result);
 */
 
 /* Task 4. Напришите программу, которая принимает на вход число (N) и 
@@ -72,24 +72,23 @@ ShowDiapazone(quad);
 // 3-9
 // 4-16
 
-// void QuaresNumbers(int num)
-// {
-//     int count = 1;
-//     while(count <= num)
-//     {
-//         Console.WriteLine($"Таблица квадратов: {count}-{count*count}");
-//         count++;
-//     }
-// }
-// Console.Write("Input number: ");
-// int num = Convert.ToInt32(Console.ReadLine());
+void QuaresNumbers(int num)
+{
+    int count = 1;
+    while(count <= num)
+    {
+        Console.WriteLine($"Таблица квадратов: {count}-{count*count}");
+        count++;
+    }
+}
+Console.Write("Input number: ");
+int num = Convert.ToInt32(Console.ReadLine());
 
-// QuaresNumbers(num);
-
+QuaresNumbers(num);
 */
 
-// Task 19.Напишите программу, которая принимает на вход пятизначное число и 
-// проверяет, является ли оно палиндромом.
+/* Task 19.Напишите программу, которая принимает на вход пятизначное число 
+// и проверяет, является ли оно палиндромом.
 // 14212 -> нет
 // 12821 -> да
 // 23432 -> да
@@ -111,18 +110,75 @@ bool IsPalindrome(int number)
     else return false;
 }
 
-Console.Write("Введите пятизначное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите пятизначное число: ");
+    int number = Convert.ToInt32(Console.ReadLine());
 
-if (IsPalindrome(number))
+    if (IsPalindrome(number))
 {
     Console.WriteLine("Число является палиндромом.");
 }
-else
+    else
 {
    Console.WriteLine("Число не является палиндромом.");
 }
-  
+*/  
 
+/* Task 21. Напишите программу, которая принимает на вход координаты двух 
+// точек и находит расстояние между ними в 3D пространстве.
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
 
+double Distanse(int x1, int x2, int y1,int y2, int z1, int z2)
+{
+    double result = Math.Sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1)+ (z2-z1)*(z2-z1));
+    return result;
+}
 
+Console.Write("Input x1: ");
+int x1 = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input y1: ");
+int y1 = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input z1: ");
+int z1 = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input x2: ");
+int x2 = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input y2: ");
+int y2 = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Input z2: ");
+int z2 = Convert.ToInt32(Console.ReadLine());
+
+double result = Distanse(x1,x2,y1,y2,z1,z2);
+
+double roundedNumber = Math.Round(result,2);
+
+Console.WriteLine(roundedNumber);
+*/
+
+/* Task 23. Напишите программу, которая принимает на вход число (N) и выдаёт 
+// таблицу кубов чисел от 1 до N.
+// 4
+// 1 - 1
+// 2 - 8
+// 3 - 27
+// 4 - 64
+
+void QuaresNumbers(int num)
+{
+    int count = 1;
+    while(count <= num)
+    {
+
+        Console.WriteLine($"Таблица квадратов: {count}-{count*count*count}");
+        count++;
+    }
+}
+Console.Write("Input number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+QuaresNumbers(num);
+*/
