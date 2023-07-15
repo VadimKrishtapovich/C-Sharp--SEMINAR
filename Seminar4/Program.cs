@@ -89,14 +89,14 @@ int[] myArray = CreateRandomArray(length, min, max);
 ShowArray(myArray);
 */
 
-// Напишите программу, которая выводит массив из 8 элементов, 
+/* Task 5/ Напишите программу, которая выводит массив из 8 элементов, 
 // заполненный нулями и единицами в случайном порядке.
 
-int [] CreateFirstArray(int size, int minValue, int maxValue);
+int[] CreateFirstArray(int size, int minValue, int maxValue)
 {
-        int [] array = new int [size];
+        int[] array = new int[size];
         
-        for(i = 0; i < size; i++);
+        for( int i = 0; i < size; i++)
         array[i] = new Random().Next(minValue, maxValue + 1);
 
         return array;
@@ -104,7 +104,7 @@ int [] CreateFirstArray(int size, int minValue, int maxValue);
 
 void ShowArray(int[] array)
 {
-    for( i = 0; i < array.Length; i++)
+    for( int i = 0; i < array.Length; i++)
         Console.Write(array[i] + " ");
 
         Console.WriteLine();
@@ -117,8 +117,9 @@ void ShowArray(int[] array)
     Console.Write("Input a max possible value ");
     int max = Convert.ToInt32(Console.ReadLine());
 
-    int [] Myarray = CreateFirstArray(length, min, max);
+    int[] Myarray = CreateFirstArray(length, min, max);
     ShowArray(Myarray);
+    */
 
 
 // Task 25: Напишите цикл, который принимает на вход два числа (A и B) 
