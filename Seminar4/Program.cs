@@ -1,7 +1,7 @@
 ﻿/*Task 1. Напишите программу, которая принимает на вход 
 //число (А) и выдаёт сумму чисел от 1 до А. 
 
-// int Sum( int a )
+// int Sum(int a)
 // {
 //     int sum = 0;
 //     for (int i=1; i<=a; i++)
@@ -10,7 +10,7 @@
 //     }
 //     return sum;
 // }  
-// Console.Write("Input A:=");
+// Console.Write("Input A := ");
 // int num = Convert.ToInt32(Console.ReadLine());
 // int result = Sum(num);
 // Console.WriteLine(result);
@@ -128,11 +128,34 @@ void ShowArray(int[] array)
 // 2, 4 -> 16
 
 
-// Task 27: Напишите программу, которая принимает на вход число и выдаёт 
+/* Task 27: Напишите программу, которая принимает на вход число и выдаёт 
 // сумму цифр в числе.
 // 452 -> 11
 // 82 -> 10
 // 9012 -> 12
+
+int CalculateDigitSum(int number)
+{
+    int sum = 0;
+
+    while (number > 0)
+    {
+        int digit = number % 10;
+        sum += digit;
+        number /= 10;
+    }
+
+    return sum;
+}
+
+Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+int digitSum = CalculateDigitSum(number);
+Console.WriteLine("Сумма цифр числа: " + digitSum);
+
+*/
+
 
 
 // Task 29: Напишите программу, которая задаёт массив из m элементов
