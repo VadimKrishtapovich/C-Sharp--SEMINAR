@@ -121,12 +121,36 @@ void ShowArray(int[] array)
     ShowArray(Myarray);
     */
 
-
-// Task 25: Напишите цикл, который принимает на вход два числа (A и B) 
+/* Task 25: Напишите цикл, который принимает на вход два числа (A и B) 
 // и возводит число A в натуральную степень B.
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
+int Variables(int A, int B)  // название метода Variables - переменные.
+{
+    int result = 1;
+    for (int i = 0; i < B; i++)
+    {
+        result *= A;
+    }
+    return result;
+}
+
+
+void Conclusion(int A, int B, int result)  // Conclusion - вывод.
+{
+    Console.WriteLine($"{A} в степени {B} равно: {result}");
+}
+
+int A, B;
+Console.Write("Введите число A: ");
+A = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите степень B: ");
+B = Convert.ToInt32(Console.ReadLine());
+
+int result = Variables(A, B);
+Conclusion(A, B, result);
+*/
 
 /* Task 27: Напишите программу, которая принимает на вход число и выдаёт 
 // сумму цифр в числе.
@@ -156,13 +180,45 @@ Console.WriteLine("Сумма цифр числа: " + digitSum);
 
 */
 
-
-
-// Task 29: Напишите программу, которая задаёт массив из m элементов
+/* Task 29: Напишите программу, которая задаёт массив из m элементов
 // и выводит их на экран. Разработать метод CreateArray(int size), 
 // генерирующий массив на основе данных, вводимых пользователем.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
+int[] CreateArray(int size)
+{
+    int[] array = new int[size];
 
+    for (int i = 0; i < size; i++)
+    {
+        Console.Write($"Введите элемент массива {i + 1}: ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
+    }
 
+    return array;
+}
+
+void ShowArray(int[] array)
+{
+
+    Console.Write("Массив: [");
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i]);
+
+        if (i < array.Length - 1)
+        {
+            Console.Write(", ");
+        }
+    }
+    Console.WriteLine("]");
+}
+
+Console.Write("Введите размер массива: ");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] myArray = CreateArray(size);
+ShowArray(myArray);
+
+*/
