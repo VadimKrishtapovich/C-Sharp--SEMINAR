@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Desktop\\C# Seminars\\Seminar6_Одномерные_массивы2.1\\Seminar6_Одномерные_массивы2.1.csproj",
-      "projectName": "Seminar6_Одномерные_массивы2.1",
-      "projectPath": "C:\\Users\\admin\\Desktop\\C# Seminars\\Seminar6_Одномерные_массивы2.1\\Seminar6_Одномерные_массивы2.1.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\C# Seminars\\Seminar6\\Seminar6.csproj",
+      "projectName": "Seminar6",
+      "projectPath": "C:\\Users\\admin\\Desktop\\C# Seminars\\Seminar6\\Seminar6.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Desktop\\C# Seminars\\Seminar6_Одномерные_массивы2.1\\obj\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\C# Seminars\\Seminar6\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
