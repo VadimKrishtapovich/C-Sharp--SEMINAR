@@ -182,16 +182,27 @@ ShowArray(myArray);
 */
 
 
-// Task 4. Напишите программу которая будет оздавать копию 
+/* Task 4. Напишите программу которая будет оздавать копию 
 // заданного масива с помощью поэлементного копирования.
 
-int[] CopyArray(int[] Array)
+int[] CopyArray(int[] Array1)
 {
-    int[] array2 = new int[Array1.Length];
-    for( int i = 0; i < Array.Length; i++)
-    {
-         
-    }
+    int[] Array2 = new int[Array1.Length];
+    for (int i = 0; i < Array1.Length; i++)
+        Array2[i] = Array1[i];
+    
+    return Array2;
+    
 }
 
-int[] Array1(1, 2, 3, 4, 5, 6, 7)
+void ShowArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+        Console.Write(array[i] + " ");
+    Console.WriteLine();
+}
+
+int[] Array1 = {1, 2, 3, 4, 5, 6};
+
+ShowArray(CopyArray(Array1));
+*/
