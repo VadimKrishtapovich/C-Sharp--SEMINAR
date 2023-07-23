@@ -1,0 +1,5 @@
+C:\Users\admin\Desktop\C# Seminars\Seminar6_Одномерные_массивы2.1\obj\Debug\net6.0\Seminar6_Одномерные_массивы2.1.csproj.AssemblyReference.cache
+C:\Users\admin\Desktop\C# Seminars\Seminar6_Одномерные_массивы2.1\obj\Debug\net6.0\Seminar6_Одномерные_массивы2.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\C# Seminars\Seminar6_Одномерные_массивы2.1\obj\Debug\net6.0\Seminar6_Одномерные_массивы2.1.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\C# Seminars\Seminar6_Одномерные_массивы2.1\obj\Debug\net6.0\Seminar6_Одномерные_массивы2.1.AssemblyInfo.cs
+C:\Users\admin\Desktop\C# Seminars\Seminar6_Одномерные_массивы2.1\obj\Debug\net6.0\Seminar6_Одномерные_массивы2.1.csproj.CoreCompileInputs.cache
