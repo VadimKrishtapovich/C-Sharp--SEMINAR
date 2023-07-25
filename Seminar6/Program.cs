@@ -181,7 +181,6 @@ int[] myArray = CreateArray(size);
 ShowArray(myArray);
 */
 
-
 /* Task 4. Напишите программу которая будет оздавать копию 
 // заданного масива с помощью поэлементного копирования.
 
@@ -206,3 +205,13 @@ int[] Array1 = {1, 2, 3, 4, 5, 6};
 
 ShowArray(CopyArray(Array1));
 */
+
+bool IsEven(int value)
+{
+    return value % 2 == 0;
+}
+Console.WriteLine("Введите число и мы ответим вам чётное оно или нет: ");
+int value = Convert.ToInt32(Console.ReadLine());
+bool result = IsEven(value);
+Console.Write(result);
+
