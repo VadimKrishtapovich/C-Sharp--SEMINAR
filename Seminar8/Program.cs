@@ -313,9 +313,64 @@ Console.WriteLine($"Строка с наименьшей суммой элеме
 // 15 18
 
 
+int[,] MultiplyMatrices(int[,] matrixA, int[,] matrixB)
+{
+    int n = matrixA.GetLength(0); // Число строк первой матрицы
+    int m = matrixA.GetLength(1); // Число столбцов первой матрицы
+    int k = matrixB.GetLength(1); // Число столбцов второй матрицы
+
+    int[,] resultMatrix = new int[n, k];
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < k; j++)
+        {
+            int sum = 0;
+            for (int x = 0; x < m; x++)
+            {
+                sum += matrixA[i, x] * matrixB[x, j];
+            }
+            resultMatrix[i, j] = sum;
+        }
+    }
+
+    return resultMatrix;
+}
+
+void ShowMatrix(int[,] matrix)
+{
+    int rows = matrix.GetLength(0);
+    int columns = matrix.GetLength(1);
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            Console.Write(matrix[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,] matrixA = {
+            { 2, 4 },
+            { 3, 2 }
+        };
+
+int[,] matrixB = {
+            { 3, 4 },
+            { 3, 3 }
+        };
+
+int[,] resultMatrix = MultiplyMatrices(matrixA, matrixB);
+
+Console.WriteLine("Результирующая матрица:");
+ShowMatrix(resultMatrix);
 
 
-// // Task 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+// // Task 60. Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+// Напишите программу, которая будет построчно выводить массив, добавляя индексы 
+// каждого элемента.
 // Массив размером 2 x 2 x 2
 // 66(0,0,0) 25(0,1,0)
 // 34(1,0,0) 41(1,1,0)
@@ -324,7 +379,69 @@ Console.WriteLine($"Строка с наименьшей суммой элеме
 
 
 
+int[,,] Create3dArray(int rows, int columns, int depth)
+{
+    int[,,] array = new int[rows, columns, depth];
+    Random random = new Random();
 
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            for (int k = 0; k < depth; k++)
+            {
+                int num;
+                do
+                {
+                    num = random.Next(10, 100); // Генерируем двузначное число
+                } while (IsNumberUsed(array, num, i, j, k));
+
+                array[i, j, k] = num;
+            }
+        }
+    }
+
+    return array;
+}
+
+bool IsNumberUsed(int[,,] array, int number, int row, int column, int depth)
+{
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                if (array[i, j, k] == number)
+                    return true;
+            }
+        }
+    }
+    return false;
+}
+
+void Show3dArray(int[,,] array)
+{
+    int rows = array.GetLength(0);
+    int columns = array.GetLength(1);
+    int depth = array.GetLength(2);
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            for (int k = 0; k < depth; k++)
+            {
+                Console.Write($"{array[i, j, k]}({i},{j},{k}) ");
+            }
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,,] myArray = Create3dArray(2, 2, 2);
+Console.WriteLine("Массив размером 2 x 2 x 2:");
+Show3dArray(myArray);
 
 
 // Task 62. Напишите программу, которая заполнит спирально массив 4 на 4.
@@ -333,3 +450,63 @@ Console.WriteLine($"Строка с наименьшей суммой элеме
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
+
+
+void FillSpiralArray(int[,] array)
+{
+    int rows = array.GetLength(0);
+    int columns = array.GetLength(1);
+
+    int value = 1;
+    int top = 0, bottom = rows - 1, left = 0, right = columns - 1;
+
+    while (value <= rows * columns)
+    {
+        // Заполняем верхний ряд слева направо
+        for (int i = left; i <= right && value <= rows * columns; i++)
+        {
+            array[top, i] = value++;
+        }
+        top++;
+
+        // Заполняем крайний правый столбец сверху донизу/
+        for (int i = top; i <= bottom && value <= rows * columns; i++)
+        {
+            array[i, right] = value++;
+        }
+        right--;
+
+        // Заполняем нижнюю строку справа налево
+        for (int i = right; i >= left && value <= rows * columns; i--)
+        {
+            array[bottom, i] = value++;
+        }
+        bottom--;
+
+        // Заполняем крайний левый столбец снизу вверх
+        for (int i = bottom; i >= top && value <= rows * columns; i--)
+        {
+            array[i, left] = value++;
+        }
+        left++;
+    }
+}
+
+void Show2dArray(int[,] array)
+{
+    int rows = array.GetLength(0);
+    int columns = array.GetLength(1);
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            Console.Write($"{array[i, j]:D2} ");
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,] myArray = new int[4, 4];
+FillSpiralArray(myArray);
+Show2dArray(myArray);
