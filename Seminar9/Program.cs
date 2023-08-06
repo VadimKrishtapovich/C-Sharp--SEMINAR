@@ -11,7 +11,6 @@ void ShowNums(int num)
 ShowNums(5);
 */
 
-
 /* Task 2. Напишите программу, которая будет принимать на вход число и возвращать 
 // сумму его цифр. int метод.
 
@@ -61,7 +60,7 @@ int num2 = Convert.ToInt32(Console.ReadLine());
 ShowEvenNum(num1, num2);
 */
 
-// Напишите программу, которая на вход принимает два числа A и B, и возводит число А в 
+/* Напишите программу, которая на вход принимает два числа A и B, и возводит число А в 
 // целую степень B.
 
 double ShowPower(double num, int pow)
@@ -83,3 +82,83 @@ Console.Write("Input the power: ");
 int pow = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine(ShowPower(num, pow));
+
+*/
+
+/*Task 64: Задайте значение N. Напишите программу, которая выведет 
+//все натуральные числа в промежутке от N до 1. Выполнить с помощью рекурсии.
+// N = 5 -> "5, 4, 3, 2, 1"
+// N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
+
+
+Console.Write("Введите значение N: ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Результат:");
+PrintNumbers(N);
+
+
+void PrintNumbers(int N)
+{
+    if (N >= 1)
+    {
+        Console.Write(N);
+        if (N > 1)
+        {
+            Console.Write(", ");
+        }
+        PrintNumbers(N - 1);
+    }
+}
+*/
+
+/* Task 66: Задайте значения M и N. Напишите программу, которая найдёт 
+//сумму натуральных элементов в промежутке от M до N.
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
+
+int FindSum(int start, int end)
+{
+    int sum = 0;
+    for (int i = start; i <= end; i++)
+    {
+        sum += i;
+    }
+    return sum;
+}
+
+Console.Write("Введите значение M: ");
+int M = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("Введите значение N: ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+int sum = FindSum(M, N);
+Console.WriteLine($"Сумма натуральных элементов от {M} до {N} = {sum}");
+
+*/
+
+/*Task 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. 
+// Даны два неотрицательных числа m и n.
+// m = 2, n = 3 -> A(m,n) = 9
+// m = 3, n = 2 -> A(m,n) = 29
+
+int Akerman ( int m, int n)
+{
+    if (m == 0) return n+1;
+    if (n == 0) return Akerman(m - 1, 1);
+    else return Akerman(m - 1, Akerman(m, n - 1));
+}
+Console.Write("Введите первый аргумент функции: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второй аргумент функции: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write(Akerman (m,n));
+*/ 
+
+
+
+
+
+
+
